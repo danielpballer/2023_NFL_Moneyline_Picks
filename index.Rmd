@@ -617,12 +617,13 @@ indiv_table
 ```{r, out.height="100%"}
 indiv_table_2
 ```
+
 -->
+
 ### Individual Plots
 ```{r, out.width="100%"}
 ggplotly(inst_indiv_plots)
 ```
-
 
 Data
 ==========================================================================
