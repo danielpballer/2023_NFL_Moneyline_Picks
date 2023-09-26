@@ -21,13 +21,13 @@ library(purrr)
 library(rvest)
 
 # Only thing you need to change (update current week)
-current_week = 1
+current_week = 3
 
 ################################ Scraping Scores ##############################
 
 week = as.list(seq(1:current_week)) # List of weeks
 
-url = "https://www.cbssports.com/nfl/schedule/"  #base URL
+url = "https://www.cbssports.com/nfl/schedule/2023/regular/"  #base URL
 
 list_of_pages = function(x){
   str_c(url,x)
