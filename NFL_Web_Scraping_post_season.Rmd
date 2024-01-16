@@ -22,15 +22,15 @@ library(rvest)
 
 # Only thing you need to change (update current week)
 reg_season_weeks = 18
-current_week = 22
+current_week = 19
 
 ################################ Scraping Scores ##############################
 
 week = as.list(seq(1:reg_season_weeks)) # List of weeks
 week_post = as.list(seq(from = 19, to = current_week, by = 1))
 
-url = "https://www.cbssports.com/nfl/schedule/2021/regular/"  #base URL regular season
-url_post = "https://www.cbssports.com/nfl/schedule/2021/postseason/"  #base URL post season
+url = "https://www.cbssports.com/nfl/schedule/2023/regular/"  #base URL regular season
+url_post = "https://www.cbssports.com/nfl/schedule/2023/postseason/"  #base URL post season
 
 #Creating the list of regular season pages
 list_of_pages = function(x){
@@ -251,7 +251,7 @@ for (i in 19:current_week){
  Wrong = last_week$Wrong+this_week$Wrong
  Percent = Correct/(Wrong+Correct)
  Record = paste(Correct, Wrong, sep = "-")
- week_espn = rep(i, 11)
+ week_espn = rep(i, 10)
  
  this_week_end = bind_cols("Record" = Record, "Correct" = Correct, "Wrong" = Wrong, 
                            "Percent" = Percent, "week" = week_espn)
