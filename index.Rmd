@@ -564,7 +564,6 @@ adj_season_leaderboard = indiv_disp_2 %>% select(Name, starts_with("Week ")) %>%
       map(indiv_disp_2$plot, ggplot_image, height = px(30), aspect_ratio = 4)
                  }) %>%
   cols_hide(columns = c(plot))
-
 ```
 
 
